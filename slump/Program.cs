@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace slump
 {
     class Program
-    {
+    { /*
         static void Main(string[] args)
         {   //övning1
-            /*
+            
             int sum = 0;
             Random randomerare = new Random();
             int[] list = new int[10];
@@ -25,7 +25,7 @@ namespace slump
             }
             Console.WriteLine(sum/list.Length);
             Console.ReadKey();
-            */
+            
             //övning2
             Random randomerare = new Random();
             int[] list = new int[20];
@@ -49,10 +49,46 @@ namespace slump
             Console.WriteLine("medianen är " + (min + max) /2);
             Console.ReadKey();
 
-            //övning3
-            //har redan gjort den i tidaigare övningar 
-            
 
+    
+            //övning3
+            
+            Console.WriteLine("Gissa på ett tall mellan 1 och 100");
+            Random rnd = new Random();
+            bool vilkor = true;
+            int tal = rnd.Next(100);
+            int i = 0;
+            while (vilkor)
+            {
+                int gissning = int.Parse(Console.ReadLine());
+                if (gissning < tal)
+                {
+                    Console.WriteLine("för lågt");
+                }
+                else if (gissning > tal)
+                {
+                    Console.WriteLine("för högt");
+                }
+                else
+                {
+                    Console.WriteLine("det tog " + i + " försök!");
+                    vilkor = false;
+                }
+                i++;
+            }
+            Console.ReadKey();
         }
+        //övning 4
+        */
+        //test
+        static void Main (string[] args)
+        {
+            function();
+            Console.Write(function());
+        }
+        public static int function(){
+            return 5;
+            }
     }
-}
+    }
+
